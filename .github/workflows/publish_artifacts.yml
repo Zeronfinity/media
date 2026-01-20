@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main  # Triggers for merges and fork syncs
+  pull_request: # Triggers for every Pull Request (CL)
 
 env:
   JDK_VERSION: 17
@@ -28,7 +29,6 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Publish to Local Directory
-        # Consolidation logic: redirects all module outputs to a single root folder
         run: ./gradlew publish -PmavenRepo=$(pwd)/build/maven-repository
 
       - name: Upload Maven Repository
