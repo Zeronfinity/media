@@ -50,6 +50,7 @@ def addMissingAarTypeToXml(xml) {
         "androidx.exifinterface:exifinterface",
         "androidx.graphics:graphics-core",
         "androidx.leanback:leanback",
+        "androidx.lifecycle:lifecycle-service",
         "androidx.media:media",
         "androidx.mediarouter:mediarouter",
         "androidx.recyclerview:recyclerview",
